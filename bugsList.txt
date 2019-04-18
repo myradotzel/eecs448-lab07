@@ -1,0 +1,6 @@
+//bugsList.txt
+1. isEmpty always returns true
+2. removeFront does not decrement size after removal
+3. removeBack does not decrement size after removal
+4. removeFront does not remove an element
+5. removeBack does not remove an element
