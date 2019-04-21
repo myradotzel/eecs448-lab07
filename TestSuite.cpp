@@ -542,13 +542,17 @@ bool TestSuite::test45() //removeFront updates m_front
 
 	try
 	{
-		list.toVector().at(1);
-		list.addFront(90);
-		return false;
+		list.addFront(100);
+		if (list.search(100))
+		{
+			return true;
+		}
+
+		else return false;
 	}
 	catch (std::out_of_range & rte)
 	{
-		return true;
+		return false;
 	}
 }
 
@@ -562,12 +566,16 @@ bool TestSuite::test46() //removeBack updates last node's m_next pointer to null
 
 	try
 	{
-		list.toVector().at(1);
-		list.addBack(90);
-		return false;
+		list.addBack(100);
+		if (list.search(100))
+		{
+			return true;
+		}
+
+		else return false;
 	}
 	catch (std::out_of_range & rte)
 	{
-		return true;
+		return false;
 	}
 }
