@@ -163,7 +163,7 @@ bool TestSuite::test9() //addBack on an empty list
 	LinkedListOfInts list;
 	list.addBack(10);
 
-	if (list.size() == 1) return true;
+	if (list.search(10)) return true;
 	else return false;
 }
 
@@ -172,7 +172,7 @@ bool TestSuite::test10() //addFront on an empty list
 	LinkedListOfInts list;
 	list.addFront(10);
 
-	if (list.size() == 1) return true;
+	if (list.search(10)) return true;
 	else return false;
 }
 
@@ -182,7 +182,7 @@ bool TestSuite::test11() //addBack on a one element list
 	list.addBack(10);
 	list.addBack(20);
 
-	if (list.size() == 2) return true;
+	if (list.search(20)) return true;
 	else return false;
 }
 
@@ -192,7 +192,7 @@ bool TestSuite::test12() //addFront on a one element list
 	list.addFront(10);
 	list.addFront(20);
 
-	if (list.size() == 2) return true;
+	if (list.search(20)) return true;
 	else return false;
 }
 
@@ -207,7 +207,7 @@ bool TestSuite::test13() //addBack on a list with many elements
 
 	list.addBack(70);
 
-	if (list.size() == 8) return true;
+	if (list.search(70)) return true;
 	else return false;
 }
 
@@ -222,10 +222,9 @@ bool TestSuite::test14() //addFront on a list with many elements
 
 	list.addFront(70);
 
-	if (list.size() == 8) return true;
+	if (list.search(70)) return true;
 	else return false;
 }
-
 
 //ADDING AND REMOVING
 bool TestSuite::test15() //size returns correct value after multiple adds and removeFronts
